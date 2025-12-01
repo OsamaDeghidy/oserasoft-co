@@ -40,9 +40,25 @@ export default function Projects() {
   useEffect(() => {
     // Fetch projects from API
     fetch('/api/projects')
-      .then((res) => res.json())
-      .then((data) => setProjects(data))
-      .catch((err) => console.error('Error fetching projects:', err))
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`)
+        }
+        return res.json()
+      })
+      .then((data) => {
+        // Ensure data is an array
+        if (Array.isArray(data)) {
+          setProjects(data)
+        } else {
+          console.error('Expected array but received:', typeof data, data)
+          setProjects([])
+        }
+      })
+      .catch((err) => {
+        console.error('Error fetching projects:', err)
+        setProjects([])
+      })
   }, [])
 
   // Handle keyboard events for modal
