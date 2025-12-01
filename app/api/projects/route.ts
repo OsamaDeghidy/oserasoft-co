@@ -19,32 +19,8 @@ export async function GET() {
     const supabase = createServerClient()
     
     if (!supabase) {
-      // Return mock data when database is not available
-      const mockProjects: Project[] = [
-        {
-          id: 1,
-          title: "مشروع تجريبي",
-          description: "هذا مشروع تجريبي للعرض عندما لا تكون قاعدة البيانات متاحة",
-          image: "/api/placeholder/600/400",
-          subImages: [],
-          technologies: ["React", "Next.js", "TypeScript"],
-          githubUrl: "https://github.com",
-          liveUrl: "https://example.com",
-          category: "web"
-        },
-        {
-          id: 2,
-          title: "مشروع تجريبي آخر",
-          description: "مشروع آخر للعرض التوضيحي",
-          image: "/api/placeholder/600/400",
-          subImages: [],
-          technologies: ["Node.js", "Express", "MongoDB"],
-          githubUrl: "https://github.com",
-          liveUrl: "https://example.com",
-          category: "fullstack"
-        }
-      ]
-      return NextResponse.json(mockProjects, { status: 200 })
+      // Return empty array when database is not available
+      return NextResponse.json([], { status: 200 })
     }
     
     const { data, error } = await supabase
