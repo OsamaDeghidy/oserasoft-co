@@ -1,0 +1,50 @@
+[
+  {
+    "id": 2,
+    "title": "تطبيق إدارة المهام",
+    "description": "تطبيق ويب لإدارة المهام مع مزامنة في الوقت الفعلي",
+    "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800",
+    "technologies": [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Socket.io"
+    ],
+    "githubUrl": "https://github.com",
+    "liveUrl": "https://example.com",
+    "category": "web"
+  },
+  {
+    "id": 3,
+    "title": "منصة تعليمية",
+    "description": "منصة تعليمية تفاعلية مع دورات فيديو واختبارات",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800",
+    "technologies": [
+      "Next.js",
+      "Prisma",
+      "PostgreSQL",
+      "AWS"
+    ],
+    "githubUrl": "https://github.com",
+    "liveUrl": "https://example.com",
+    "category": "web"
+  },
+  {
+    "id": 5,
+    "title": "لوحة تحكم إدارية",
+    "description": "لوحة تحكم شاملة لإدارة المحتوى والتحليلات",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+    "subImages": [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"
+    ],
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Chart.js",
+      "REST API"
+    ],
+    "githubUrl": "https://github.com",
+    "liveUrl": "https://example.com",
+    "category": "web"
+  }
+]
